@@ -20,11 +20,7 @@ public:
 	product(int weight, string code, int length, string type); // Конструктор с параметрами
 
 	~product(); // Деструктор
-
-	int GetWeight();
-	string GetCode();
-	string GetType();
-	int GetLength();
+	
 	void Print();
 
 };
