@@ -15,7 +15,7 @@ public:
 
 	matrix(int a11, int a12, int a21, int a22);  // Конструткор с параметрами
 
-	matrix operator= (const matrix& other); // Оператор присваивания
+	matrix& operator= (const matrix& other); // Оператор присваивания
 
 	matrix operator- (const matrix& other);
 
