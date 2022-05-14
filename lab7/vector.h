@@ -22,7 +22,7 @@ public:
 	int operator[](int i);  // Любой элемент массива
 	int operator ()(int s);
 	Vector operator -(int n);  // Удаляет n последних элементов
-	Vector operator +(int N);  // Удаляет n последних элементов
+	Vector operator +(int N);  // Добавляет N нулевых элементов
 	friend ostream& operator<<(ostream& out, const Vector& op1);
 	friend istream& operator>>(istream& in, Vector& op1);
 };
