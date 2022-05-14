@@ -48,6 +48,7 @@ int Vector::operator[](int i) {
 }
 int Vector::operator()(int s) {
 	if (s < 0) throw error("Size < 0");
+	if (s > MAX_SIZE) throw error("Vector length more than MAXSIZE\n");
 	Vector temp(size, arr);
 	size = s;
 	if (arr != 0) {
@@ -73,6 +74,7 @@ Vector Vector::operator -(int n) {
 		delete[]arr;
 	}
 	size = size - n;
+	if (size < 0) throw error("Vector<0");
 	arr = new int[size];
 	for (int i = 0; i < size; i++) {
 		arr[i] = temp.arr[i];
