@@ -20,13 +20,6 @@ Vector::Vector(int s, int* mas) {
 		arr[i] = mas[i];
 	}
 }
-Vector::Vector(const Vector& op1)
-{
-	size = op1.size;
-	arr = new int[size];
-	for (int i = 0; i < size; i++)
-		arr[i] = op1.arr[i];
-}
 const Vector& Vector::operator =(const Vector& op1) {
 	if (&op1 == this) {
 		return *this;
