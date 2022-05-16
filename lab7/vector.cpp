@@ -57,7 +57,7 @@ int Vector::operator()(int s) {
 		}
 	}
 }
-Vector Vector::operator -(int n) {
+Vector& Vector::operator -(int n) {
 	if (size == 0) throw error("Vector is empty");
 	if (n == 0) {
 		return *this;
@@ -75,7 +75,7 @@ Vector Vector::operator -(int n) {
 	return *this;
 
 }
-Vector Vector::operator +(int N) {
+Vector& Vector::operator +(int N) {
 	if (N == 0) {
 		return *this;
 	}
