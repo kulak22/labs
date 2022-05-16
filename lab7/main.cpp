@@ -11,13 +11,12 @@ int main()
     {   
         Vector first(6);
         cout << first << endl;
-        Vector second;
         first(4);
         cout << first << endl;
-        second = first - 2;
-        cout << second << endl;
-        second = first + 2;
-        cout << second << endl;
+        first - 2;
+        cout << first << endl;
+        first + 2;
+        cout << first << endl;
     }
     catch (error& e)
     {
