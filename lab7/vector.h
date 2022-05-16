@@ -16,13 +16,12 @@ public:
 	}
 	Vector(int s); // Конструктор с параметрами
 	Vector(int s, int* mas); // Конструктор с параметрами
-	Vector(const Vector& op1);
 	~Vector(); // Деструктор
 	const Vector& operator =(const Vector& op1);
 	int operator[](int i);  // Любой элемент массива
 	int operator ()(int s);
-	Vector operator -(int n);  // Удаляет n последних элементов
-	Vector operator +(int N);  // Добавляет N нулевых элементов
+	Vector& operator -(int n);  // Удаляет n последних элементов
+	Vector& operator +(int N);  // Добавляет N нулевых элементов
 	friend ostream& operator<<(ostream& out, const Vector& op1);
 	friend istream& operator>>(istream& in, Vector& op1);
 };
