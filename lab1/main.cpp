@@ -205,4 +205,6 @@ void change(const char* fileName)//Функція, що змінює запис
         cin >> arr[d-1].year_film;
     }
     f.close();
+    cout << endl;
+    saveToFile("file.dat");
 }
