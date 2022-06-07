@@ -39,23 +39,8 @@ int Vector::operator[](int i) {
 	if (i >= size) throw error("index>size");
 	return arr[i-1];
 }
-int Vector::operator()(int s) {
-	if (s < 0) throw error("Size < 0");
-	if (s > MAX_SIZE) throw error("Vector length more than MAXSIZE\n");
-	Vector temp(size, arr);
-	size = s;
-	if (arr != 0) {
-		delete[]arr;
-	}
-	arr = new int[size];
-	for (int i = 0; i < size; i++) {
-		if (i < temp.size) {
-			arr[i] = temp.arr[i];
-		}
-		else {
-			arr[i] = 0;
-		}
-	}
+int Vector::operator()() {
+	return size;
 }
 Vector& Vector::operator -(int n) {
 	if (size == 0) throw error("Vector is empty");
