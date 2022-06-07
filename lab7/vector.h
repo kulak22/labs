@@ -19,7 +19,7 @@ public:
 	~Vector(); // Деструктор
 	const Vector& operator =(const Vector& op1);
 	int operator[](int i);  // Любой элемент массива
-	int operator ()(int s);
+	int operator ()();
 	Vector& operator -(int n);  // Удаляет n последних элементов
 	Vector& operator +(int N);  // Добавляет N нулевых элементов
 	friend ostream& operator<<(ostream& out, const Vector& op1);
