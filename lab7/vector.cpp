@@ -39,9 +39,6 @@ int Vector::operator[](int i) {
 	if (i >= size) throw error("index>size");
 	return arr[i-1];
 }
-int Vector::operator()() {
-	return size;
-}
 Vector& Vector::operator -(int n) {
 	if (size == 0) throw error("Vector is empty");
 	if (n == 0) {
