@@ -11,8 +11,7 @@ int main()
     {   
         Vector first(6);
         cout << first << endl;
-        first(4);
-        cout << first << endl;
+        cout << first(4) << endl;
         first - 2;
         cout << first << endl;
         first + 2;
