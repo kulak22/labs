@@ -15,8 +15,7 @@ public:
 
 	matrix(int a11, int a12, int a21, int a22);  // Конструктор з параметрами
 
-	matrix& operator= (const matrix& other); // Оператор привласнення
-
+	matrix& operator= (const matrix& other); // Оператор присвоєння
 	matrix operator- (const matrix& other); // Оператор різниці матриці
 
 	friend matrix operator*= (matrix& other, int number);  // Добуток матриці на число
