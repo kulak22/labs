@@ -16,7 +16,7 @@ public:
 	int GetA();
 	void SetB(int b);
 	int GetB();
-	Pair& operator = (const Pair& op1);  // Оператор присовєння
+	Pair& operator = (const Pair& op1);  // Оператор присвоєння
 	friend Pair operator*(Pair& op1 , Pair&op2);  // Оператор добутку пар чисел
 	~Pair();
 	friend istream& operator>>(istream& in, Pair& op1);	// Оператор введення
