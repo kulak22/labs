@@ -7,26 +7,26 @@ using namespace std;
 class matrix{
 
 private:
-	int detA;  // Определитель( Детерминант )
-	int a11, a12, a21, a22;  // Элементы матрицы
-	void det(int a11, int a12, int a21, int a22);  // Функция которая считает определитель
+	int detA;  // Визначник( Детермінант )
+	int a11, a12, a21, a22;  // Елементи матриці
+	void det(int a11, int a12, int a21, int a22);  // Функція яка рахує визначник
 public:
 	matrix();  // Конструктор по умолчанию 
 
-	matrix(int a11, int a12, int a21, int a22);  // Конструткор с параметрами
+	matrix(int a11, int a12, int a21, int a22);  // Конструктор с параметрами
 
-	matrix& operator= (const matrix& other); // Оператор присваивания
+	matrix& operator= (const matrix& other); // Оператор привласнення
 
-	matrix operator- (const matrix& other);
+	matrix operator- (const matrix& other); // Оператор різниці матриці
 
-	friend matrix operator*= (matrix& other, int number);  // Произвидение матрицы на число
-	friend matrix operator-- (matrix& other);  // Префиксная ( меняет до) --a
-	friend matrix operator-- (matrix& other, int number);  //  Постфиксная ( меняет после ) a--
+	friend matrix operator*= (matrix& other, int number);  // Добуток матриці на число
+	friend matrix operator-- (matrix& other);  // Префіксна ( змінює до ) --a
+	friend matrix operator-- (matrix& other, int number);  //  Постфіксна ( змінює після ) a--
 
 	void Print();
 
 
-	int GetA11() {
+	int GetA11() {	// Гетери
 		return a11;
 	}
 	int GetA12() {
