@@ -45,9 +45,7 @@ Vector& Vector::operator -(int n) {
 		return *this;
 	}
 	Vector temp(size, arr);
-	if (arr != 0) {
-		delete[]arr;
-	}
+	delete[]arr;
 	size = size - n;
 	if (size < 0) throw error("Vector<0");
 	arr = new int[size];
@@ -62,9 +60,7 @@ Vector& Vector::operator +(int N) {
 		return *this;
 	}
 	Vector temp(size, arr);
-	if (arr != 0) {
-		delete[]arr;
-	}
+	delete[]arr;
 	size = size + N;
 	arr = new int[size];
 	for (int i = 0; i < size; i++) {
