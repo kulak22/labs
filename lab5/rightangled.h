@@ -12,8 +12,8 @@ protected:
 	float c;  
 	int s; 
 public:
-	RightAngled(); // Конструктор по умолчанию
-	RightAngled(int a, int b, float c, int s); // Конструктор с параметрами
+	RightAngled(); // Конструктор за замовчуванням
+	RightAngled(int a, int b, float c, int s); // Конструктор з параметрами
 	~RightAngled(); // Деструктор
 	RightAngled& operator=(const RightAngled& op1);
 	friend istream& operator>>(istream& in, RightAngled& op1);
