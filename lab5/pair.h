@@ -11,13 +11,13 @@ protected:
 	int b;
 public:
 	Pair();
-	Pair(int a, int b);  // Конструктор с параметрами
-	void SetA(int a);
+	Pair(int a, int b);  // Конструктор з параметрами
+	void SetA(int a);	// Гетери та сетери
 	int GetA();
 	void SetB(int b);
 	int GetB();
-	Pair& operator = (const Pair& op1);  // Оператор равенства 
-	friend Pair operator*(Pair& op1 , Pair&op2);  // Оператор умножения пар чисел
+	Pair& operator = (const Pair& op1);  // Оператор присовєння
+	friend Pair operator*(Pair& op1 , Pair&op2);  // Оператор добутку пар чисел
 	~Pair();
 	friend istream& operator>>(istream& in, Pair& op1);
 	friend ostream& operator<<(ostream& out, const  Pair& op1);
