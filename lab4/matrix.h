@@ -13,7 +13,7 @@ private:
 public:
 	matrix();  // Конструктор по умолчанию 
 
-	matrix(int a11, int a12, int a21, int a22);  // Конструктор с параметрами
+	matrix(int a11, int a12, int a21, int a22);  // Конструктор з параметрами
 
 	matrix& operator= (const matrix& other); // Оператор привласнення
 
