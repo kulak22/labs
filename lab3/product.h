@@ -17,7 +17,7 @@ public:
 
 	product(const product &other); // Конструктор копіювання
 
-	product(int weight, string code, int length, string type); // Конструктор с параметрами
+	product(int weight, string code, int length, string type); // Конструктор з параметрами
 
 	~product(); // Деструктор 
 	
