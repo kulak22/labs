@@ -8,21 +8,21 @@ void product::Print() {
 	cout << "Товар" << endl;
 	cout << "Код: " << code << "\tТип: " << type << "\tДлина: " << length << "\tМасса : " << weight << endl;
 }
-product::product() {   // Конструктор по умолчанию
+product::product() {   // Конструктор за замовчуванням
 	cout << " Конструктор по умолчанию " << endl;
 	length = 0;
 	weight = 0;
 	code = "N/A";
 	type = "N/A";
 }
-product::product(const product& other) {   // Конструктор с копированием
+product::product(const product& other) {   // Конструктор копіювання
 	cout << " Конструктор копирования " << endl;
 	this->code = other.code;
 	this->length = other.length;
 	this->type = other.type;
 	this->weight = other.weight;
 }
-product::product(int weight, string code, int length, string type) {   // Конструктор с параметрами
+product::product(int weight, string code, int length, string type) {   // Конструктор з параметрами
 	cout << "Введите код товара : ";
 	cin >> code;
 	this->code = code;
