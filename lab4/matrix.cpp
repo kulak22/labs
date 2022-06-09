@@ -25,7 +25,7 @@ void matrix::Print() {
 void matrix::det(int a11, int a12, int a21, int a22) {  // Функція яка рахує визначник
 	this->detA = a11 * a22 - a12 * a21;
 }
-matrix& matrix::operator = (const matrix & other){  // Оператор привласнення
+matrix& matrix::operator = (const matrix & other){  // Оператор присвоєння
 	this->a11 = other.a11;
 	this->a12 = other.a12;
 	this->a21 = other.a21;
