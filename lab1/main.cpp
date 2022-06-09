@@ -81,7 +81,6 @@ void saveToFile(const char* fileName) //функція, що записує да
     f.open(fileName, ios::binary);
     f.write((char*)arr, sizeof(sworker) * worker_index);
     f.close();
-    cout << "Введені дані збережено до файлу\n";
 }
 void readFromFile(const char* fileName) //функція, що зчитує дані з бінарного файлу
 {
@@ -128,10 +127,12 @@ void addNew()//функція, що додає(створює) новий зап
     cout << "\n";
 
     saveToFile("file.dat");
+
+    cout << "Введені дані збережено до файлу\n";
 }
 
 void del(const char* fileName)//функція, що видаляє запис 
-{   
+{
     ifstream f;
     f.open(fileName, ios::binary);
     if (!f) {
@@ -142,13 +143,13 @@ void del(const char* fileName)//функція, що видаляє запис
     cin >> d;
     for (int i = d - 1; i < worker_index; i++)
     {
-       arr[i] = arr[i + 1];
+        arr[i] = arr[i + 1];    // Зміщую всі елементи на 1 вліво, щоб той який потрібно видалити зник
     }
     worker_index--;
     f.close();
     cout << "\n";
     for (int i = 0; i < worker_index; i++) {
-       cout << i + 1 << "\t" << arr[i].name_film << "\t" << arr[i].name_prod << "\t" << arr[i].name_country << "\t" << arr[i].year_film << endl;
+        cout << i + 1 << "\t" << arr[i].name_film << "\t" << arr[i].name_prod << "\t" << arr[i].name_country << "\t" << arr[i].year_film << endl;
     }
     cout << "\n";
 
@@ -163,16 +164,16 @@ void sort(const char* fileName)//Функція, що сортує по перш
         cout << "Файлу не існує";
     }
     else {
-        for (int j = 0; j < worker_index-1; j++) {
+        for (int j = 0; j < worker_index - 1; j++) {
             int k = j;
-            for (int i = j; i < worker_index-1; i++) {
-                if (arr[k].name_film[0] > arr[i + 1].name_film[0]) {
-                    k = i + 1;
+            for (int i = j; i < worker_index - 1; i++) {
+                if (arr[k].name_film[0] > arr[i + 1].name_film[0]) {  // Порівнюю перші символи перших слів k та i+1 рядків 
+                    k = i + 1;  // Зберігаю індекс того рядку де перший символ перошого слова більший ( в алфавіті стоїть попереду )
                 }
             }
-            sworker temp = arr[k];
-            arr[k] = arr[j];
-            arr[j] = temp;
+            sworker temp = arr[k];  //
+            arr[k] = arr[j];        // Міняю рядки місцями ( на перше місце, там де буква в алфавіті йде першою )
+            arr[j] = temp;          // Потім k збільшується на 1 (j++, k=j) і рядок який я перемістив ми не будемо розглядати далі
         }
     }
     f.close();
@@ -202,9 +203,10 @@ void change(const char* fileName)//Функція, що змінює запис
         cout << "Введіть назву країни  ";
         cin >> arr[d - 1].name_country;
         cout << "Введіть рік випуску цього фільму  ";
-        cin >> arr[d-1].year_film;
+        cin >> arr[d - 1].year_film;
     }
     f.close();
-    cout << endl;
     saveToFile("file.dat");
+
+    cout << "Введені дані збережено до файлу\n";
 }
