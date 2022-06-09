@@ -19,8 +19,8 @@ public:
 	Pair& operator = (const Pair& op1);  // Оператор присовєння
 	friend Pair operator*(Pair& op1 , Pair&op2);  // Оператор добутку пар чисел
 	~Pair();
-	friend istream& operator>>(istream& in, Pair& op1);
-	friend ostream& operator<<(ostream& out, const  Pair& op1);
+	friend istream& operator>>(istream& in, Pair& op1);	// Оператор введення
+	friend ostream& operator<<(ostream& out, const  Pair& op1);	// Оператор виведення 
 };
 
 #endif //LAB_5_2_CEM_PAIR_H
