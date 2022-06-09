@@ -10,22 +10,22 @@ class Vector {
 	int size;
 	int* arr;
 public:
-	Vector() { // Конструктор по умолчанию
+	Vector() { // Конструктор за замовчуванням
 		size = 0;
 		arr = 0;
 	}
-	Vector(int s); // Конструктор с параметрами
-	Vector(int s, int* mas); // Конструктор с параметрами
+	Vector(int s); // Конструктор з параметрами
+	Vector(int s, int* mas); // Конструктор з параметрами
 	~Vector(); // Деструктор
-	const Vector& operator =(const Vector& op1);
-	int operator[](int i);  // Любой элемент массива
+	const Vector& operator =(const Vector& op1);	// Оператор присвоєння
+	int operator[](int i);  // Будь-який елемент масива
 	int operator ()(){
 		return size;
 	}
-	Vector& operator -(int n);  // Удаляет n последних элементов
-	Vector& operator +(int N);  // Добавляет N нулевых элементов
-	friend ostream& operator<<(ostream& out, const Vector& op1);
-	friend istream& operator>>(istream& in, Vector& op1);
+	Vector& operator -(int n);  // Видаляє n останніх елементів
+	Vector& operator +(int N);  // Додає N нульових елементів
+	friend ostream& operator<<(ostream& out, const Vector& op1);	// Оператор виведення
+	friend istream& operator>>(istream& in, Vector& op1);	// Оператор введення
 };
 
 
