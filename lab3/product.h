@@ -8,18 +8,18 @@ using namespace std;
 class product {
 
 private:
-	int weight; // Масса
-	string code; // Код
+	int weight; // Маса товару
+	string code; // Код 
 	string type; // Тип
-	int length; // Длина
+	int length; // Довжина
 public:
-	product(); // Конструктор по умолчанию
+	product(); // Конструктор за замовчуванням  
 
-	product(const product &other); // Конструктор копирования 
+	product(const product &other); // Конструктор копіювання
 
 	product(int weight, string code, int length, string type); // Конструктор с параметрами
 
-	~product(); // Деструктор
+	~product(); // Деструктор 
 	
 	void Print();
 
